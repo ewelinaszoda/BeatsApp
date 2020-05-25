@@ -1,0 +1,111 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ * {
+   box-sizing: border-box;
+}
+
+ /* body does not work, I do not know why */
+.body {
+   background-color: pink ;
+}
+.header {
+    background-color:#fff
+   }
+ 
+.header {
+    position:fixed;
+    z-index:3;
+    width:100%;
+    left:0;
+    top:0;
+    height:70px;
+    padding:0 70px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center
+   }
+.header_list {
+   display:none;
+   list-style-type:none;
+   right:0
+} 
+   
+   
+.header_list li {
+   padding:20px 0;
+   margin:0 10px
+}
+
+header,body{background-color:#fff}
+
+   .header {
+      position: fixed;
+      z-index: 3;
+      width: 100%;
+      left: 0;
+      top: 0;
+      height: 70px;
+      padding: 0 50px;
+      display: flex;
+      /* justify-content: space-between;
+      align-items: center; */
+   }
+
+
+   .header_list{
+      display:flex;
+      list-style-type:none;
+      margin-right:15px;
+      padding-right:0}
+
+   .header_list li{
+      padding:20px 0;margin:0 10px}
+
+
+
+.header_list li a { 
+   font-family:Montserrat-Bold,sans-serif;
+   font-size:13px;
+   text-transform:uppercase;
+   text-decoration:none;
+   letter-spacing:1px;
+   color:#242424;
+   transition:all .5s cubic-bezier(.075,.82,.165,1)}
+   
+.header_list li a:hover {
+   color:#d9b256
+}
+
+   .footer {
+    margin: 0px 20px;
+    padding: 0px 50px;
+    background-color: yellow;
+ }
+
+.footer_social_icon { 
+   height:18px;
+   display:flex;
+   margin:16px auto;
+   cursor:pointer}
+   
+.footer_social_icon:hover circle,.footer_social_icon:hover path {
+   fill:#d9b256}
+   
+   .footer_social_icon circle,.footer_social_icon path{
+      transition:all .5s cubic-bezier(.075,.82,.165,1);fill:#777}
+
+.aside{display:-webkit-box;display:flex;background-color:#d9b256}}@media (min-width:1100px){.aside{display:-webkit-box;display:flex;background-color:#fff}}.aside__text{-webkit-transform:rotate(-90deg);transform:rotate(-90deg);width:250px;height:200px;font-size:16px;color:#777}.aside__social__icon{height:18px;display:block;margin:16px auto;cursor:pointer}.aside__social__icon:hover circle,.aside__social__icon:hover path{fill:#d9b256}.aside__social__icon circle,.aside__social__icon path{-webkit-transition:all .5s cubic-bezier(.075,.82,.165,1);transition:all .5s cubic-bezier(.075,.82,.165,1);fill:#777}

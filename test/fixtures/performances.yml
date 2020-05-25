@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  festival_id: MyString
+  artist_id: MyString
+  stage: 1
+
+two:
+  festival_id: MyString
+  artist_id: MyString
+  stage: 1
