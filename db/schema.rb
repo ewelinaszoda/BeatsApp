@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2020_05_25_172655) do
   create_table "festivals", force: :cascade do |t|
     t.string "name"
     t.date "start_date"
-    t.date "finish_date"
+    t.date "end_date"
     t.string "localization"
     t.string "genre"
     t.integer "description"

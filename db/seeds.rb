@@ -8,80 +8,73 @@
 
 require 'faker'
 
-30.times do User.create(username: Faker::Internet.email, Faker::FunnyName. first_name: Faker::FunnyName.first_name, last_name: Faker::FunnyName.last_name)
+50.times do User.create(username: Faker::Internet.email, first_name: Faker::FunnyName.first_name, last_name: Faker::FunnyName.last_name)
 end
 
-30.times do Festival.create([ 
-                            { name: "Tomorrowland   "  
-                             start_date: 2021-07-27
-                             finish_date: 2021-07-29
+
+
+# :startDate => DateTime.parse("09/14/2009 8:00") 
+# :startDate => DateTime.strptime("09/14/2009 8:00", "%m/%d/%Y %H:%M")
+
+Festival.create([ 
+                            { name: "Tomorrowland"  
+                             start_date: Date.strptime('27/07/2021', "%m/%d/%Y")
+                             end_date: Date.strptime('29/07/2021',  "%m/%d/%Y")
                              localization: "Boom, Belgium"
                              genre: "EDM"
                              description: "Tomorrowland is a Belgian electronic dance music festival held in Boom, Belgium. Tomorrowland was first held in 2005. It now stretches over two weekends and usually sells out in minutes.Pretty much every A-list DJ in the world came to Tomorrowland. Spectacular stages, truly phenomenal festival grounds and – last but not least – DreamVille, the camping grounds that really made you believe you’re inside a dream. During the sixth edition, 25,000 thousand people spent the night at DreamVille."
-                             attachment: 
                              like: 0  
                             },
 
-                             { name: "   " 
-                             date:       
-                             localization:
-                             genre: 
-                             description:
+                             { name: "Creamfields" 
+                             start_date: Date.strptime('25/05/2021', "%m/%d/%Y")
+                             end_date: Date.strptime('27/05/2021',  "%m/%d/%Y")     
+                             localization: "Daresbury, UK"
+                             genre: "EDM"
+                             description: "One of the most prestigious dance festivals on the planet! Creamfields is always full to bursting with worldwide stars. Whatever flavour of electronic music you're into, you'll find more than you could ask for at Creamfields."
                              like: 0  
                             },
 
-                             {name: "   " 
-                             date:       
-                             localization:
-                             description:
+                             {name: "Rock am Ring & Rock im Park" 
+                             start_date: Date.strptime('18/06/2021', "%m/%d/%Y")
+                             end_date: Date.strptime('21/06/2021',  "%m/%d/%Y")  
+                             localization:"Berlin, Germany"
+                             genre: "Rock"
+                             description: "If rock and metal are your game, then Germany's Rock am Ring needs no introduction. Along with sister festival Rock im Park, it pulls unparalleled lineups year after year and can lay claim to being one of the best-attended weekends in the world."
                              like: 0  
                             },
 
-                             {name: "   " 
-                             date:       
-                             localization:
-                             description:
+                             {name: "Coachella" 
+                             start_date: Date.strptime('28/08/2021', "%m/%d/%Y")
+                             end_date: Date.strptime('30/08/2021',  "%m/%d/%Y")     
+                             localization: "Indio, California, US"
+                             genre: "Pop"
+                             description: "The Coachella Valley Music and Arts Festival (commonly called Coachella or the Coachella Festival) is an annual music and arts festival held at the Empire Polo Club in Indio, California, in the Coachella Valley in the Colorado Desert."
                              like: 0  
                              },
 
-                             {name: "   " 
-                             date:       
-                             localization:
-                             description:
+                             {name: "Glastonbury" 
+                             start_date: Date.strptime('20/06/2021', "%m/%d/%Y")
+                             end_date: Date.strptime('22/06/2021',  "%m/%d/%Y")     
+                             localization: "Pilton, UK"
+                             genre: "House"
+                             description: "The clear standout from this list, Glastonbury sets the bar when it comes to worldwide music festivals. It hosts the biggest names in music on its famous Pyramid Stage, but it's the other side of Glastonbury that really sets it apart. "
                              like: 0  
                              },
 
-                             {name: "   " 
-                             date:       
-                             localization:
-                             description:
-                             like: 0  
-                             },
-
-                             {name: "   " 
-                             date:       
-                             localization:
-                             description:
-                             like: 0  
-                             },
-
-                             {name: "   " 
-                             date:       
-                             localization:
-                             description:
-                             like: 0  
-                             },
-
-                             {name: "   " 
-                             date:       
-                             localization:
-                             description:
+                             {name: "All Points East" 
+                             start_date: Date.strptime('27/07/2021', "%m/%d/%Y")
+                             end_date: Date.strptime('29/07/2021',  "%m/%d/%Y")   
+                             localization: "London, UK"
+                             genre: "POP"
+                             description: "The clear standout from this list, Glastonbury sets the bar when it comes to worldwide music festivals. It hosts the biggest names in music on its famous Pyramid Stage, but it's the other side of Glastonbury that really sets it apart. "
                              like: 0  
                              }
+
 ])
 end
 
-30.times do Review.create(user_id: User.all.sample.id, festival_id: Festival.all.sample.id, text: Faker::Lorem.sentences(number: 3))
+50.times do Review.create(user_id: User.all.sample.id, festival_id: Festival.all.sample.id, text: Faker::Lorem.sentences(number: 3))
 end
 
 30.times do Band.create(name: Faker::Music.band)
@@ -90,7 +83,7 @@ end
 30.times do Performance.create(festival_id: Festival.all.sample.id, band_id: Band.all.sample.id, stage: (1..10).to_a.sample)
 end
 
-100.times do FestivalComment.create(festival_id: Festival.all.sample.id, user_id: User.all.sample.id, text: Faker::Lorem.sentences(number: 1))
+50.times do FestivalComment.create(festival_id: Festival.all.sample.id, user_id: User.all.sample.id, text: Faker::Lorem.sentences(number: 1))
 end 
 
 puts "Successfully Seeded."
