@@ -1,0 +1,13 @@
+<h1>Bands#show</h1>
+<p>Find me in app/views/bands/show.html.erb</p>
+<h1><%= @band.name %><h1>
+
+<% @band.festivals.each do |f| >
+<ul>
+<% @band.performaces.each do |p|  %>
+<li>
+<%= p.festival %>
+<%= p.stage %>
+</li>
+<% end %>
+</ul>

@@ -18,10 +18,14 @@
    box-sizing: border-box;
 }
 
- /* body does not work, I do not know why */
-.body {
-   background-color: pink;
-}
+body {
+   background-image: url('background.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: 100% 100%;
+   background-position: center;
+ }
+
 .header {
     background-color:#fff;
    }
@@ -38,51 +42,18 @@
     justify-content: space-between;
     align-items: center
    }
-.header_list {
-   display:none;
-   list-style-type:none;
-   right:0
-} 
-   
-   
-.header_list li {
-   padding:20px 0;
-   margin:0 10px
-}
-
-header,body{background-color:#fff}
-
-   .header {
-      position: fixed;
-      z-index: 3;
-      width: 100%;
-      left: 0;
-      top: 0;
-      height: 70px;
-      padding: 0 50px;
-      display: flex;
-      /* justify-content: space-between;
-      align-items: center; */
-   }
-
    .header_list {
       display:flex;
       list-style-type:none;
       margin-right:15px;
       padding-right:0
-   }
-
-   .header_log .header_sign {
-      margin-right: 0; 
-      display: flex;
-      text-align: right;
-
-   }
-
-   .header_list li {
-      padding:20px 0;
-      margin:0 10px;
-   }
+   } 
+   
+   
+.header_list li {
+   padding:20px 20px;
+   margin:0 10px;
+}
 
 .header_list li a { 
    font-family:Montserrat-Bold,sans-serif;
@@ -90,18 +61,25 @@ header,body{background-color:#fff}
    text-transform:uppercase;
    text-decoration:none;
    letter-spacing:1px;
-   color:#242424;
+   color: rgb(14, 96, 159);
    transition:all .5s cubic-bezier(.075,.82,.165,1);
 }
-   
+
 .header_list li a:hover {
-   color:#d9b256;
+   color: rgb(18, 36, 138);
+}
+
+.header_log .header_sign {
+   margin-right: 0; 
+   display: flex;
+   text-align: right;
+   border: 1px solid rgb(14, 96, 159);
 }
 
    .footer {
     margin: 0px 20px;
     padding: 0px 50px;
-    background-color: yellow;
+    background-color: white;
  }
 
 .footer_social_icon { 
@@ -109,12 +87,14 @@ header,body{background-color:#fff}
    display: inline-block;
    margin:16px auto;
    cursor:pointer;
+   color:rgb(14, 96, 159);
 }
    
 .footer_social_icon:hover circle, .footer_social_icon:hover path {
-   fill:#d9b256;
+   fill: rgb(18, 136, 138);
 }
    
 .footer_social_icon circle, .footer_social_icon path {
-      transition:all .5s cubic-bezier(.075,.82,.165,1);fill:#777;
+      transition:all .5s cubic-bezier(.075,.82,.165,1);
+      fill: rgb(18, 136, 138);
    }

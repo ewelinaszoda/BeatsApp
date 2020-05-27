@@ -12,17 +12,17 @@
   <header>
   <div class="header">
     <a href= "/" class="header_logo">
-        <img src="app/assets/images/logo.jpg" alt="logo" />
+        <img src="/images/logo.jpg" alt="logo" />
     </a>
-   <div class="header_search">
-        <img src="app/assets/images/search.png" alt="search" />
-    </div>
-     <ul class="header_list">
+  <ul class="header_list">
     <li><%= link_to "Home", "/beats" %></li>
     <li><%= link_to "About", "/beats/about" %></li>
     <li><%= link_to  "Find a Festival", "#" %></li>
     <li><%= link_to "Contact us", "/beats/contact_us" %></li>
   </ul>
+  <div class="header_search">
+        <img src="/images/search.png" alt="search" />
+  </div>
     <div class="header_log">
         <%= button_to "Log in", "#"%>
     </div>
@@ -31,7 +31,7 @@
     </div>
   </div>
   </header>
-  
+  <img src="app/assets/images/festival.jpg" alt="festival" />
  
     <%= yield %>
   

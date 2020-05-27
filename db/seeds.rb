@@ -91,5 +91,3 @@ end
 end 
 
 puts "Successfully Seeded."
-
-#  plus User does not working !!!!!!!!!!!!!
