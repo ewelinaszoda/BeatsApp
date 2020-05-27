@@ -1,19 +1,13 @@
-class FestivalController < ApplicationController
+class FestivalsController < ApplicationController
  
   def index
-    @festivals = Festival.search(params[:query])
-    render 'index'
+    # @festivals = Festival.search(params[:query])
+    # render 'index' #?????????
+    @festival = Festival.all
   end
   
   def show
+    @festival = Festival.find(params[:id])
   end
 
-  def new
-  end
-
-  def create
-  end
-
-  def delete
-  end
 end

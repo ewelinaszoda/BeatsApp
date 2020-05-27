@@ -1,0 +1,14 @@
+<h1><%= @festival.name %></h1>
+<h2><%= @festival.start_date %> ---- <%= @festival.end_date %></h2>
+<p> <%= @festival.description %><p>
+<h5>Genre: <%= @festival.genre %></h5>
+<h5>Likes: <%= @festival.like %></h5>
+<h3> LINE UP: <% @festival.bands.each do |band| %><h3>
+        <%= link_to band.name, band  %>
+        <% end %>
+
+       
+<% if false %>
+<h3>Review: <% @festival.reviews %>
+<%= render(@festivals) || "There are no festivals you are going to!" %>
+<% end %>

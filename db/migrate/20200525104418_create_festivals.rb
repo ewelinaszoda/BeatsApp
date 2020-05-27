@@ -6,7 +6,7 @@ class CreateFestivals < ActiveRecord::Migration[6.0]
       t.date :end_date
       t.string :localization
       t.string :genre
-      t.integer :description
+      t.string :description
       t.references :attachment, :polymorphic => {:default => 'Photo'}
       t.integer :like
       

@@ -4,6 +4,6 @@ class Performance < ApplicationRecord
     validates :stage, presence: true
     validates :stage, inclusion: { in: 1..10 }
     # Band should appear on a givin Festival once
-    validates :band, uniqueness: { scope: :festival, 
+    validates :band_id, uniqueness: { scope: :festival_id, 
         message: "should only appear once per festival."}
 end

@@ -1,3 +1,5 @@
+<%
+=begin >
 <%= form_for @user, controller: 'users', action: 'create' do |f| %>
   <%= f.label :username %>
   <%= f.text_field :username %>
@@ -9,4 +11,16 @@
   <%= f.password_field :password_confirmation %>
 
   <%= f.submit "create" %>
+<% end %>
+
+
+<%= form_for @user, url: login_path, method: :post do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "log in" %>
+  or <%= link_to(controller: 'users', action: 'new') { 'sign up' } %>
 <% end %>

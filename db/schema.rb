@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_05_25_110259) do
     t.date "end_date"
     t.string "localization"
     t.string "genre"
-    t.integer "description"
+    t.string "description"
     t.string "attachment_type", default: "Photo"
     t.integer "attachment_id"
     t.integer "like"

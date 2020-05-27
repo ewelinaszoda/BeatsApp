@@ -28,7 +28,7 @@ Festival.create([
                              localization: "Boom, Belgium",
                              genre: "EDM",
                              description: "Tomorrowland is a Belgian electronic dance music festival held in Boom, Belgium. Tomorrowland was first held in 2005. It now stretches over two weekends and usually sells out in minutes.Pretty much every A-list DJ in the world came to Tomorrowland. Spectacular stages, truly phenomenal festival grounds and – last but not least – DreamVille, the camping grounds that really made you believe you’re inside a dream. During the sixth edition, 25,000 thousand people spent the night at DreamVille.",
-                             like: 0, 
+                             like: 80, 
                             },
 
                              { name: "Creamfields",
@@ -37,7 +37,7 @@ Festival.create([
                              localization: "Daresbury, UK",
                              genre: "EDM",
                              description: "One of the most prestigious dance festivals on the planet! Creamfields is always full to bursting with worldwide stars. Whatever flavour of electronic music you're into, you'll find more than you could ask for at Creamfields.",
-                             like: 0,
+                             like: 60,
                             },
 
                              {name: "Rock am Ring & Rock im Park",
@@ -46,7 +46,7 @@ Festival.create([
                              localization:"Berlin, Germany",
                              genre: "Rock",
                              description: "If rock and metal are your game, then Germany's Rock am Ring needs no introduction. Along with sister festival Rock im Park, it pulls unparalleled lineups year after year and can lay claim to being one of the best-attended weekends in the world.",
-                             like: 0, 
+                             like: 5, 
                             },
 
                              {name: "Coachella",
@@ -55,7 +55,7 @@ Festival.create([
                              localization: "Indio, California, US",
                              genre: "Pop",
                              description: "The Coachella Valley Music and Arts Festival (commonly called Coachella or the Coachella Festival) is an annual music and arts festival held at the Empire Polo Club in Indio, California, in the Coachella Valley in the Colorado Desert.",
-                             like: 0, 
+                             like: 73, 
                              },
 
                              {name: "Glastonbury",
@@ -64,7 +64,7 @@ Festival.create([
                              localization: "Pilton, UK",
                              genre: "House",
                              description: "The clear standout from this list, Glastonbury sets the bar when it comes to worldwide music festivals. It hosts the biggest names in music on its famous Pyramid Stage, but it's the other side of Glastonbury that really sets it apart. ",
-                             like: 0, 
+                             like: 20, 
                              },
 
                              {name: "All Points East", 
@@ -73,7 +73,7 @@ Festival.create([
                              localization: "London, UK",
                              genre: "Pop",
                              description: "The clear standout from this list, Glastonbury sets the bar when it comes to worldwide music festivals. It hosts the biggest names in music on its famous Pyramid Stage, but it's the other side of Glastonbury that really sets it apart. ",
-                             like: 0,
+                             like: 15,
                              }
 
 ])

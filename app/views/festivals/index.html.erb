@@ -1,0 +1,15 @@
+<h1>All Festivals</h1>
+
+<ul>
+<% @festival.each do |festival| %>
+    <li>
+        <%= link_to festival.name, festival %><br>
+        <%= festival.description %><br>
+        Start date: <%= festival.start_date %><br>
+        End date: <%= festival.end_date %><br>
+        Genre: <%= festival.genre %><br>
+        Likes: <%= festival.like %><br>
+        Top Band: <%= festival.bands.first.name %><br>
+    </li><br>
+<% end %>
+</ul>

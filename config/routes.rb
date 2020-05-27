@@ -1,18 +1,20 @@
 Rails.application.routes.draw do
 
-  get 'bands/show'
+  root 'beats#home'
+
+  # get 'sign_in'
+ 
   # get '/login' => 'sessions#new'
   # post '/login' => 'sessions#create'
   # post '/logout' => 'sessions#destroy'
 
-  # http://localhost:3000?query="search_text"
+  # http://localhost:3000?query="search_text" get '/beats/query?' ?????
 
   resources :users, only: [:new, :create, :show, :edit, :destroy]   #????????????????
   
+  # get '/sign-in', to: 'users#sign_in'
   get '/beats', to: 'beats#index'
-  get '/beats/about', to: 'beats#about'
-
-  # get '/beats/query?'
+  # get '/beats/about', to: 'beats#about'
   
   resources :festivals, only: [:index, :show]
  
