@@ -15,7 +15,7 @@ Band.destroy_all
 Review.destroy_all
 FestivalComment.destroy_all
 
-50.times do User.create(username: Faker::Internet.email, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
+150.times do User.create(username: Faker::Internet.email, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
 end
 
 # :startDate => DateTime.parse("09/14/2009 8:00") 
@@ -78,13 +78,13 @@ Festival.create([
 
 ])
 
-30.times do Band.create(name: Faker::Music.band)
+60.times do Band.create(name: Faker::Music.band)
 end
 
 50.times do Review.create(user_id: User.all.sample.id, festival_id: Festival.all.sample.id, text: Faker::Lorem.sentences(number: 3))
 end
 
-30.times do Performance.create(festival_id: Festival.all.sample.id, band_id: Band.all.sample.id, stage: (1..10).to_a.sample)
+150.times do Performance.create(festival_id: Festival.all.sample.id, band_id: Band.all.sample.id, stage: (1..10).to_a.sample)
 end
 
 50.times do FestivalComment.create(festival_id: Festival.all.sample.id, user_id: User.all.sample.id, text: Faker::Lorem.sentences(number: 1))
