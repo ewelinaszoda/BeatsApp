@@ -1,0 +1,12 @@
+<h1>Your new Review</h1>
+
+<%= form_for(@review) do |f| %>
+  <%= f.label :festival %>
+  <%= f.collection_select :festival_id, Festival.all, :id, :name %>
+  
+  <%= f.label "Please leave your review here (max 200 characters):" %>
+  <%= f.text_field :text %>
+
+  <%= f.submit "Leave your review" %>
+
+<% end %>

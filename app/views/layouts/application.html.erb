@@ -4,37 +4,42 @@
     <title>BeaTs</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
   <header>
   <div class="header">
-    <div class="logo">
-    <%= link_to image_tag('logo.jpg'), root_path, id: "logo" %>
+    <div class="header_logo">
+      <%= link_to image_tag('logo.jpg'), root_path, id: "logo" %>
      </div>
   <ul class="header_list">
-    <li><%= link_to "Home", "/beats" %></li>
-    <li><%= link_to "About", "/beats/about" %></li>
-    <li><%= link_to  "Find a Festival", "#" %></li>
-    <li><%= link_to "Contact us", "/beats/contact_us" %></li>
+    <li><%= link_to "Home", "/" %></li>
+    <li><%= link_to "About", "#" %></li>
+     <li><%= link_to  "ALL Fest", "/festivals" %></li>
+    <li><%= link_to  "Find Fest", "/festivals/find" %></li>
+    <li><%= link_to "Contact us", "#" %></li>
   </ul>
   <div class="header_search">
-        <img src="/images/search.png" alt="search" />
+  
+
+     <%= link_to image_tag('search.png'), root_path, id: "search" %>
   </div>
-    <div class="header_log">
+     <div class="header_sign_in">
+        <%= button_to "Sign in", "#"%>
+    </div>
+    <div class="header_log_in">
         <%= button_to "Log in", "#"%>
     </div>
      <div class="header_sign">
-        <%= button_to "Sign in", "#"%>
+        <%= button_to "Log out", "#"%>
     </div>
   </div>
   </header>
   <img src="app/assets/images/festival.jpg" alt="festival" />
  
     <%= yield %>
-  
+ 
   </body>
  <footer class="footer">
   <h3>© 2020 Beats. All rights reserved.<h3>

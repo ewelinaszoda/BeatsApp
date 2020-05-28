@@ -1,13 +1,12 @@
-<h1>Bands#show</h1>
-<p>Find me in app/views/bands/show.html.erb</p>
 <h1><%= @band.name %><h1>
 
-<% @band.festivals.each do |f| >
 <ul>
-<% @band.performaces.each do |p|  %>
+<% @band.performances.each do |performance|  %>
 <li>
-<%= p.festival %>
-<%= p.stage %>
+On the festival: <%= link_to performance.festival.name, performance.festival %>.<br>
+When: <%= performance.festival.start_date %>, <%= performance.festival.end_date %>.<br>
+You can find us one the <%= performance.stage %> stage.<br><br>
 </li>
-<% end %>
+<% end %><br>
+See you there!
 </ul>

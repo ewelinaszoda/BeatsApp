@@ -7,3 +7,13 @@
 <% if flash[:alert] %>
     <div class="alert"><%= flash[:alert] %></div>
 <% end %>
+
+<% if false %>
+<h3>Festival you are goit to: <% @user.festivals %>
+<%= render(@festivals) || "There are no festivals you are going to!" %>
+<% end %>
+
+<% if false %>
+<h3>Your reviews: <% @user.reviews %>
+<%= render(@festivals) || "There are no festivals you are going to!" %>
+<% end %>
