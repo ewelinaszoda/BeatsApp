@@ -12,7 +12,14 @@ class FestivalsController < ApplicationController
   end
 
   def find
+    @festival = Festival.new
   end 
+
+  def find_festival
+    @festival = Festival.find(params[:festival][:id])
+    redirect_to @festival
+  end
+  
 
   def like 
     @festival = Festival.find(params[:id])

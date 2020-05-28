@@ -1,20 +1,18 @@
 <h1>Find you dremed festival!!!<h1>
 
-<%= form_for(@festival) do |f| %>
+<%= form_with(model: @festival, url: '/find-festival') do |f| %>
   <%= f.label 'Festival Name' %>
-  <%= f.collection_select :festival_id, Festival.all, :id, :name %>
-  
-  <%= f.label 'Start date' %>
-  <%= f.collection_select :festival_id, Festival.all, :id, :start_date %>
+  <%= f.collection_select :id, Festival.all, :id, :name %>
 
-  <%= f.label 'End date' %>
-  <%= f.collection_select :festival_id, Festival.all, :id, :end_date %>
-
-  <%= f.label 'Localization' %>
+  <%
+=begin%>
+ <%= f.label 'Localization' %>
   <%= f.collection_select :festival_id, Festival.all, :id, :localization %>
 
   <%= f.label 'Genre' %>
-  <%= f.collection_select :festival_id, Festival.all, :id, :genre%>
+  <%= f.collection_select :festival_id, Festival.all, :id, :genre%> 
+<%
+=end%>
 
   <%= f.submit 'Find' %>
-<% end %>
+<% end %> 

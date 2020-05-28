@@ -8,10 +8,14 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]   #????????????????
   resources :reviews, only: [:new, :create, :show, :edit, :delete]
+  
+  get 'festivals/like' => 'festivals#like'
+  get 'festivals/find', to: 'festivals#find'
+  post 'find-festival', to: 'festivals#find_festival'
+  
   resources :festivals, only: [:index, :show]
 
-  get 'festivals/find' => 'festivals#find'
-  get 'festivals/like' => 'festivals#like'
+
 
 
   resources :bands, only: [:show]

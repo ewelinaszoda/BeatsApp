@@ -81,7 +81,7 @@ Festival.create([
 60.times do Band.create(name: Faker::Music.band)
 end
 
-50.times do Review.create(user_id: User.all.sample.id, festival_id: Festival.all.sample.id, text: Faker::Lorem.sentences(number: 3))
+50.times do Review.create(user_id: User.all.sample.id, festival_id: Festival.all.sample.id, text: Faker::Lorem.sentence)
 end
 
 150.times do Performance.create(festival_id: Festival.all.sample.id, band_id: Band.all.sample.id, stage: (1..10).to_a.sample)

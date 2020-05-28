@@ -13,16 +13,12 @@
         <% end %>
   
 <ul>
-
-<%
-=begin%>
- <h5>Users<%= @festival.users.each do |user| %>
-<li><%= user.first_name %></li>
+<h5>Check out below who is going to the festival: <% @festival.users.each do |user| %>
+<li><%= user.first_name %> <%= user.last_name %></li>
 <% end %>
 </ul> 
-<%
-=end%>
 
+<ul>
 <h5>Reviews<%= @festival.reviews.each do |review| %>
 <li><%= review.text %></li>
 <% end %>
