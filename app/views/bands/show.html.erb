@@ -1,12 +1,12 @@
-<h1><%= @band.name %><h1>
+<br><br><h2><%= @band.name %><h2>
 
 <ul>
 <% @band.performances.each do |performance|  %>
 <li>
 On the festival: <%= link_to performance.festival.name, performance.festival %>.<br>
-When: <%= performance.festival.start_date %>, <%= performance.festival.end_date %>.<br>
-You can find us one the <%= performance.stage %> stage.<br><br>
+When: <%= performance.festival.start_date %> --- <%= performance.festival.end_date %>.<br>
+You can find us one the stage number <%= performance.stage %>. <br><br>
 </li>
 <% end %><br>
 See you there!
-</ul>
+</ul><br><br>

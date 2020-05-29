@@ -26,11 +26,14 @@ h1 {
 }
 
 h2 {
+   font-family:Montserrat,sans-serif;
    font-size:26px
 }
 
-h2,h3 {
-   font-family:Montserrat,sans-serif
+h3 {
+   font-family:Montserrat,sans-serif;
+   font-size:24px
+
 }
    
 h3 {
@@ -69,14 +72,14 @@ p {
    }
 
 
- /* body{
+   /* body#festival#about {
    background-image: url('background.jpg');
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-size: 100% 100%;
    background-position: center;
    margin: 70px 20px
- } */
+ }  */
  /* <body  <%= image_tag('background.jpg', {:style => 'height:40vw;width:100%;margin-bottom:20px;'})%>> */
 
  .header {
@@ -195,17 +198,19 @@ p {
    padding: 0 10px;
    cursor:pointer;
    color:rgb(14, 96, 159);
+   text-decoration:none;
 }
    
 .footer_social_icon:hover circle, .footer_social_icon:hover path {
    fill: rgb(14, 96, 159);
+   text-decoration:none;
 }
    
 .footer_social_icon circle, .footer_social_icon path {
       transition:all .5s cubic-bezier(.075,.82,.165,1);
-      fill: rgb(18, 136, 138);;
+      fill: rgb(18, 136, 138);
+      text-decoration:none;
    } 
-
 
    /* festival page */
 
@@ -217,7 +222,7 @@ p {
    }
 
    .festival_all_ul a {
-      
+
       list-style-type: none;
       font-family:Montserrat-Bold,sans-serif;
       font-size:20px;
@@ -234,3 +239,161 @@ p {
    .festival_all_ul a:hover{
          color:rgb(14, 96, 159);
       }
+
+/* about page */
+
+.container {
+   position: relative;
+   text-align: center;
+   color: white;
+ }
+
+ .centered {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+ }
+
+
+ /* contact us*/
+
+.form {
+   margin: 0px 80px;
+   padding:70px 0px;
+   position:fixed;
+   flex-wrap:wrap;
+   height: 50vh;
+   
+}
+ 
+
+    
+      .form__wrapper {
+       display:flex}
+     
+   .form__form { 
+      width:40%;padding-right:100px}
+      
+      .form__contact{
+         position:relative;
+         width:50%;
+         border-left:1px solid #242424;
+         margin:50px 0;
+         padding:0 60px} 
+         
+       .form__contact__element{
+            display:-webkit-box;
+            display:flex;
+            -webkit-box-align:start;
+            align-items:flex-start}
+       
+  .form__contact h3{
+         color:#242424;
+         font-size:16px;
+         text-transform:uppercase;
+         margin-bottom:10px}
+    
+         .form__contact p{
+            color:#242424}
+
+         .form__contact ul{
+            list-style:none}
+            
+            .form__contact img{
+               width:30px;
+               margin-right:40px}
+               
+               .form .input,.form .textarea{
+                  width:100%;
+                  background-color:transparent;
+                  margin:20px 0;
+                  padding:20px 0;
+                  border:none;
+                  border-bottom:1px solid #242424;
+                  font-size:21px;color:#242424} */
+                   
+.form .input::placeholder,.form .textarea::placeholder{color:#242424}
+.button--black {
+   font-family:Montserrat-Bold,sans-serif;
+   font-size:13px;
+   padding:10px 20px} 
+
+.button--black {
+   color:#d9b256;
+   text-transform:uppercase;
+   border:2px solid;
+   cursor: pointer;
+}
+
+.button--black {
+   background-color:#242424} 
+
+   /* festival show page */
+
+   .festival_show_page h1 {
+      
+      font-family:Montserrat,sans-serif;
+      color:rgb(18, 136, 138);
+      font-size:25px;
+      text-align:center;
+     
+
+
+   }
+
+   .festival_show_page h2 {
+  
+         font-family:Montserrat,sans-serif;
+         font-size:22px;
+         text-align:center;
+   
+   }
+
+      .festival_show_page p {
+            font-family:OpenSans,sans-serif;
+            color:#666;
+            font-size:16px;
+       
+            text-align: justify;
+            padding: 0 70px;
+            text-decoration:none;
+
+      }
+   
+      .festival_show_page h4 {
+  
+         font-family:Montserrat,sans-serif;
+         font-size:18px;
+         text-align:center;
+   
+   }
+   
+   .festival_show_page h3 {
+      font-family:Montserrat,sans-serif;
+      font-size:24px;
+      text-align:center;
+      padding: 0 70px;
+   
+   }
+      
+   
+   .festival_show_page h5 {
+      font-family:OpenSans,sans-serif;
+      font-size:16px;
+      text-align: justify;
+      padding: 0 70px;
+      color:rgb(14, 96, 159);
+   }
+   
+   .festival_show_page p a {
+      font-family:Montserrat-Bold,sans-serif
+   }
+
+   .festival_show_page li {
+      font-family:Montserrat-Bold,sans-serif;
+      font-size:16px;
+      text-align: justify;
+   } 
+      

@@ -6,6 +6,17 @@ class FestivalsController < ApplicationController
     @festival = Festival.all
   end
   
+  def home
+
+  end
+
+  def about
+    # with it reading as a two layouts
+    # render 'layouts/form'
+  end 
+
+  def contact_us
+  end 
 
   def show
     @festival = Festival.find(params[:id])

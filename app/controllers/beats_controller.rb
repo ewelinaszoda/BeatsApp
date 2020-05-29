@@ -1,10 +1,10 @@
 class BeatsController < ApplicationController
 
-  def home
+#   def home
 
-  end
+#   end
 
-  def about
-    render 'layouts/form'
-  end 
-end
+#   def about
+#     render 'layouts/form'
+#   end 
+# end

@@ -1,12 +1,20 @@
-<h1>Your new Review</h1>
+
+ <div class="cointainer">
+ <%= image_tag('background.jpg', {:style => 'height:36vw;width:100%;margin-bottom:20px;'})%> 
+
+<div class="centered">
+<h1>Create a review</h1>
 
 <%= form_for(@review) do |f| %>
-  <%= f.label :festival %>
-  <%= f.collection_select :festival_id, Festival.all, :id, :name %>
-  
-  <%= f.label "Please leave your review here (max 200 characters):" %>
-  <%= f.text_field :text %>
+  <h3><%= f.label :Choose_festival %><h3>
+  <%= f.collection_select :festival_id, Festival.all, :id, :name %><br>
+
+  <h3><%= f.label "Please leave your review here (max 200 characters):" %><h3>
+  <%= f.text_area :text %><br>
 
   <%= f.submit "Leave your review" %>
 
 <% end %>
+
+</div>
+</div>

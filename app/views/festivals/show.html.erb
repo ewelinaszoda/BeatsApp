@@ -1,6 +1,6 @@
 <br><div class="festival_show_page">
 <h1><%= @festival.name %></h1>
-<h2><%= @festival.start_date %> ---- <%= @festival.end_date %></h2>
+<h2><%= @festival.start_date %> ---- <%= @festival.end_date %></h2><br>
 <p> <%= @festival.description %><p>
 <h4>Genre: <%= @festival.genre %></h4>
 <h4>👍 <%= @festival.like %></h4>
@@ -13,27 +13,34 @@
 =end%>
 
 <h3> LINE UP: <% @festival.bands.each do |band| %><h3>
-        <%= link_to band.name, band %>
+        <p><%= link_to band.name, band %><p>
         <% end %>
-  
-<ul>
-<h5>Check out below who is going to the festival: <% @festival.users.each do |user| %>
-<li><%= user.first_name %> <%= user.last_name %></li>
-<% end %>
-</ul> 
 
 <ul>
-<h5>Reviews<%= @festival.reviews.each do |review| %>
-<li><%= review.text %></li>
+<h3>Check out who is going to the festival:</h3>
+<% @festival.users.each do |user| %>
+<p><li><%= user.first_name %> <%= user.last_name %></li></p>
 <% end %>
+</ul> 
+<ul>
+
+<ul>
+<h3>Reviews<h3>
+<%= @festival.reviews.each do |review| %>
+<p><li><%= review.text %></li><p>
+<% end %><br><br>
 </ul>
+
+<%= button_to "Leave Review", "/reviews/new" %><br><br>
+
+
+
+
 
 <% if false %>
 <h3>Users: <% @festival.users %>
 <%= render(@users) || "There are noone who is going to the festival yet! Be first!" %>
 <% end %>
-
-<%= button_to "Leave Review", "/reviews/new" %>
 
 <% if false %>
 <h3>Review: <% @festival.reviews%>
