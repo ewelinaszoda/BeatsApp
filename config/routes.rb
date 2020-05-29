@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # http://localhost:3000?query="search_text" get '/beats/query?' ?????
 
-  resources :users, only: [:new, :create]   #????????????????
+  resources :users, only: [ :create]  
   resources :reviews, only: [:show, :new, :create, :edit, :delete]
   
   get 'about' => 'festivals#about'
@@ -19,11 +19,15 @@ Rails.application.routes.draw do
 
   resources :bands, only: [:show]
 
-  get '/sign-in', to: 'users#sign_in'
-  get '/login' => 'users#new'
-  post '/login' => 'users#create'
-  post '/logout' => 'users#destroy'
+  # get '/sign-in', to: 'users#sign_in'
+  # get '/login' => 'users#new'
+  # post '/login' => 'users#create'
+  # post '/logout' => 'users#destroy'
   # get '/beats/about', to: 'beats#about'
+
+  get '/sign-in', to: 'users#sign_in'
+  get '/sign-out', to: 'users#sign_out'
+
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

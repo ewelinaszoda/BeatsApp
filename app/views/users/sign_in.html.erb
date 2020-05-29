@@ -1,0 +1,32 @@
+ <div class="cointainer">
+ <%= image_tag('background.jpg', {:style => 'height:36vw;width:100%;margin-bottom:20px;'})%> 
+
+<div class="centered">
+<h3>Sign In</h3><br>
+
+<% if flash[:errors] %>
+<ul>
+  <% for error in flash[:errors] %>
+    <li style="color: red;"><%= error %></li>
+  <% end %>
+</ul>
+<% end %>
+
+<%= form_with model: User.new do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %><br><br>
+
+   <%= f.label :first_name %>
+  <%= f.text_field :first_name%><br><br>
+
+   <%= f.label :last_name %>
+  <%= f.text_field :last_name%><br><br>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %><br><br>
+
+  <%= f.submit %>
+<% end %>
+
+</div>
+</div>
