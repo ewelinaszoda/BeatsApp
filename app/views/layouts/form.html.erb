@@ -6,18 +6,17 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <style>
+  <style>
 
-  body {
-   background-color: white;
+body {
+   background-image: url('background.jpg');
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-size: 100% 100%;
    background-position: center;
    margin: 70px 20px
    }
-
-    </style>
+  </style>
   </head>
   <body>
   <header>
@@ -36,7 +35,7 @@
   <div class="header_search">
   
 
-     <%= link_to image_tag('search.png'), "/festivals/find" %>
+     <%= link_to image_tag('search.png'), root_path, id: "search" %>
   </div>
      <button class="header_sign_in">
         <%= link_to "Sign in", "#", :class => "button" %>

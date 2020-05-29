@@ -14,18 +14,86 @@
  *= require_self
  */
 
+ = require_tree .
 
- * {
-   box-sizing: border-box;
+
+
+
+h1 {
+   font-family:Montserrat-Bold,sans-serif;
+   color: black;
+   font-size:30px
 }
 
-body {
-   /* background-image: url('background.jpg'); */
+h2 {
+   font-size:26px
+}
+
+h2,h3 {
+   font-family:Montserrat,sans-serif
+}
+   
+h3 {
+   color:#242424;
+   font-size:px;
+   margin:0 0 20px
+}
+
+h4 {
+   font-family:Lora,serif;
+   color:#222;
+   font-size:16px
+}
+
+h5 {
+   font-family:PlayfairDisplay,serif
+}
+
+h6 {
+   color:#222;
+   font-size:12px;
+   font-family: Montserrat-Bold,sans-serif;
+}
+
+a {
+   font-family:Montserrat-Bold,sans-serif
+}
+
+p { 
+   font-family:OpenSans,sans-serif;
+   color:#666;
+   font-size:16px}
+   
+   * {
+      box-sizing:border-box
+   }
+
+
+ /* body{
+   background-image: url('background.jpg');
    background-repeat: no-repeat;
    background-attachment: fixed;
    background-size: 100% 100%;
    background-position: center;
- }
+   margin: 70px 20px
+ } */
+ /* <body  <%= image_tag('background.jpg', {:style => 'height:40vw;width:100%;margin-bottom:20px;'})%>> */
+
+ .header {
+   background-color:#fff;
+   position:fixed;
+   z-index:3;
+   width:100%;
+   left:0;
+   top:0;
+   height:70px;
+   padding:0 20px;
+   display:flex;
+   justify-content: space-between;
+   align-items: center;
+
+  }
+
 
  .header_logo {
    display: table-cell;
@@ -36,12 +104,16 @@ body {
  .header_logo img {
    width: 100%;
    height: auto auto;
+   width: 70px; 
+   height: 70px; 
+   display: block; 
  }
  
  .header_search {
    border-left: 1px solid #a7a7a7;
    padding-left: 20px;
    padding-top: 5px;
+ 
  }
 .header_search img {
      width: 15px;
@@ -56,18 +128,19 @@ body {
     left:0;
     top:0;
     height:70px;
-    padding:0 50px;
+    padding:0 20px;
     display:flex;
     justify-content: space-between;
     align-items: center
    }
+
    .header_list {
       display:flex;
+      right:0;
       list-style-type:none;
       margin-right:15px;
-      padding-right:0
+      float: left;
    } 
-   
    
 .header_list li {
    padding:20px 20px;
@@ -80,12 +153,12 @@ body {
    text-transform:uppercase;
    text-decoration:none;
    letter-spacing:1px;
-   color: rgb(14, 96, 159);
+   color:rgb(18, 136, 138);
    transition:all .5s cubic-bezier(.075,.82,.165,1);
 }
 
 .header_list li a:hover {
-   color: rgb(18, 36, 138);
+   color:rgb(14, 96, 159);
 }
 
 .header_log_in .header_sign_in .header_log_out {
@@ -95,35 +168,69 @@ body {
    border: 1px solid rgb(14, 96, 159);
 }
 
+.button {
+   border: none;
+   color: white;
+   text-decoration: none;
+ }
+
    .footer {
-    margin: 0px 20px;
-    padding: 0px 50px;
-    background-color:#fff;
+    margin: 0px 0px;
+    padding: 0px 0px;
+    color:rgb(18, 136, 138);
     z-index:2;
-    width:100%;
-    right:0;
-    left:0;
-    top:0;
+   
     height:50px;
     padding:auto auto;
     display:flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+   font-family:Montserrat-Bold,sans-serif;
+   font-size:26px;
  }
 
 .footer_social_icon { 
-   height:18px;
+   height:25px;
    display: inline-block;
-   margin:16px auto;
+   padding: 0 10px;
    cursor:pointer;
    color:rgb(14, 96, 159);
 }
    
 .footer_social_icon:hover circle, .footer_social_icon:hover path {
-   fill: rgb(18, 136, 138);
+   fill: rgb(14, 96, 159);
 }
    
 .footer_social_icon circle, .footer_social_icon path {
       transition:all .5s cubic-bezier(.075,.82,.165,1);
-      fill: rgb(18, 136, 138);
+      fill: rgb(18, 136, 138);;
    } 
+
+
+   /* festival page */
+
+   .festival_all_ul {
+   margin: 0;
+   padding 0;
+  
+      
+   }
+
+   .festival_all_ul a {
+      
+      list-style-type: none;
+      font-family:Montserrat-Bold,sans-serif;
+      font-size:20px;
+      text-transform:uppercase;
+      text-decoration:none;
+      letter-spacing:1px;
+      color:rgb(18, 136, 138);
+      transition:all .5s cubic-bezier(.075,.82,.165,1);
+       display:flex;
+       align-items: center;
+
+   }
+
+   .festival_all_ul a:hover{
+         color:rgb(14, 96, 159);
+      }

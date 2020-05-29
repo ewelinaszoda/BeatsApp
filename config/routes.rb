@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'festival/find'
-  # root 'beats#home'
   root 'festivals#home'
 
   # http://localhost:3000?query="search_text" get '/beats/query?' ?????
@@ -9,14 +7,14 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]   #????????????????
   resources :reviews, only: [:new, :create, :show, :edit, :delete]
   
-  get 'festivals/like' => 'festivals#like'
+  get 'about' => 'beats#about'
+  get 'contact_us' => 'beat#contact_us'
+
+  get 'festivals/like', to: 'festivals#like'
   get 'festivals/find', to: 'festivals#find'
   post 'find-festival', to: 'festivals#find_festival'
   
   resources :festivals, only: [:index, :show]
-
-
-
 
   resources :bands, only: [:show]
 
