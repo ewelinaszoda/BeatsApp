@@ -19,6 +19,7 @@ class FestivalsController < ApplicationController
   end 
 
   def show
+    # byebug
     @festival = Festival.find(params[:id])
   end
 
@@ -30,13 +31,17 @@ class FestivalsController < ApplicationController
     @festival = Festival.find(params[:festival][:id])
     redirect_to @festival
   end
+
+  # def add_festival
+  #   festival = Festival.find_by(id: params[:id])
+  # end 
   
 
-  def like 
-    @festival = Festival.find(params[:id])
-    @festival.like
-    redirect_to @festival
-  end 
+  # def like 
+  #   @festival = Festival.find(params[:id])
+  #   @festival.like
+  #   redirect_to @festival
+  # end 
 
 
   def festival_params

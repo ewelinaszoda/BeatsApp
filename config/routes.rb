@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   # http://localhost:3000?query="search_text" get '/beats/query?' ?????
 
-  resources :users, only: [ :create]  
-  resources :reviews, only: [:show, :new, :create, :edit, :delete]
+  resources :users, only: [ :show, :create]  
+  resources :reviews, only: [:new, :create,:show, :edit, :delete]
   
   get 'about' => 'festivals#about'
   # get 'about' => 'beats#about'
@@ -15,8 +15,11 @@ Rails.application.routes.draw do
   get 'festivals/find', to: 'festivals#find'
   post 'find-festival', to: 'festivals#find_festival'
   
-  resources :festivals, only: [:index, :show]
+  resources :festivals, only: [:index, :show ]
 
+  # show match everything!!!!!!!!!!!!!! placeholder
+  # get "festivals/:banana" => 'festivals#show' 
+  # get "festivals/:id" => 'festivals#show' 
   resources :bands, only: [:show]
 
   # get '/sign-in', to: 'users#sign_in'

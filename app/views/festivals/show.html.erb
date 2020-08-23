@@ -1,49 +1,43 @@
-<br><div class="festival_show_page">
-<h1><%= @festival.name %></h1>
-<h2><%= @festival.start_date %> ---- <%= @festival.end_date %></h2><br>
-<p> <%= @festival.description %><p>
-<h4>Genre: <%= @festival.genre %></h4>
-<h4>👍 <%= @festival.like %></h4>
+<br>
+<div class="festival_show_page">
+    <h1><%= @festival.name %></h1>
+    <h2><%= @festival.start_date %> ---- <%= @festival.end_date %></h2><br>
+    <h3> <%= @festival.description %><h3>
+            <h4>Genre: <%= @festival.genre %></h4>
+            <h4>👍 <%= @festival.like %></h4><br>
 
- <%
+            <%
 =begin%>
- <%= link_to "👍", like_festival_path(@festival.id) %> 
- 
-<%
+            <%= link_to "👍", like_festival_path(@festival.id) %>
+
+            <%
 =end%>
 
-<h3> LINE UP: <% @festival.bands.each do |band| %><h3>
-        <p><%= link_to band.name, band %><p>
-        <% end %>
+            <h3> LINE UP:
+                <% @festival.bands.each do |band| %>
+                <h3>
+                    <h4><%= link_to band.name, band %><h4>
+                            <% end %><br>
 
-<ul>
-<h3>Check out who is going to the festival:</h3>
-<% @festival.users.each do |user| %>
-<p><li><%= user.first_name %> <%= user.last_name %></li></p>
-<% end %>
-</ul> 
-<ul>
+                            <ul>
+                                <h2>Check out who is going to the festival:</h2>
+                                <% @festival.users.each do |user| %>
+                                <h4>
+                                    <li><%= user.first_name %> <%= user.last_name %></li>
+                                </h4>
+                                <% end %>
+                            </ul>
+                            <ul>
 
-<ul>
-<h3>Reviews<h3>
-<%= @festival.reviews.each do |review| %>
-<p><li><%= review.text %></li><p>
-<% end %><br><br>
-</ul>
+                                <ul>
+                                    <h3>Reviews<h3>
+                                            <%= @festival.reviews.each do |review| %>
 
-<%= button_to "Leave Review", "/reviews/new" %><br><br>
+                                            <p>
+                                                <li><%= review.text %></li>
+                                                <p>
 
+                                                    <% end %>
+                                </ul>
 
-
-
-
-<% if false %>
-<h3>Users: <% @festival.users %>
-<%= render(@users) || "There are noone who is going to the festival yet! Be first!" %>
-<% end %>
-
-<% if false %>
-<h3>Review: <% @festival.reviews%>
-<%= render(@users) || "There are no review for the festival. Let's write one!" %>
-<% end %>
-<div>
+                                <%= button_to "Leave Review", "/reviews/new", method: "get", class: "button-festival-show" %><br><br>

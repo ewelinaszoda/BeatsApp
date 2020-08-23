@@ -1,16 +1,16 @@
 <br>
 
 <div class="festival_all_ul">
-<ul>
-<% @festival.each do |festival| %>
-    <li>
-        <%= link_to festival.name, festival %><br>
-        <%= festival.description %><br><br>
-        Start date: <%= festival.start_date %><br><br>
-        End date: <%= festival.end_date %><br><br>
-        Genre: <%= festival.genre %><br><br>
-        👍 <%= festival.like %><br><br>
-        Top Band: <%= festival.bands.first.name %><br><br>
-    </li><br>
-<% end %>
-</ul>
+    <ul>
+        <% @festival.each do |festival| %>
+        <li>
+            <%= link_to festival.name, festival %><br>
+            <%= festival.description %><br><br>
+            Start date: <%= festival.start_date %><br><br>
+            End date: <%= festival.end_date %><br><br>
+            Genre: <%= festival.genre %><br><br>
+            👍 <%= festival.like %><br><br>
+            Top Band: <%= festival.bands.first.name %><br><br>
+        </li><br>
+        <% end %>
+    </ul>

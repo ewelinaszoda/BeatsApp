@@ -1,8 +1,6 @@
 class ReviewsController < ApplicationController
 
-  def show
-    @review = review.find(params[:id])
-  end
+
 
   def new
     @review = Review.new
@@ -11,11 +9,15 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.create(review_params)
     if @review.valid?
-      redirect_to "/festival/:id/"
+      redirect_to @review
     else
       redirect_to new_review_path
       # render :new
     end
+  end
+
+  def show
+    @review = Review.find(params[:id])
   end
 
   def edit
@@ -26,12 +28,12 @@ class ReviewsController < ApplicationController
     @reviews = Review.find(params[:id])
     @reviews.update(reviews_params)
 
-    redirect_to "/festival/:id/"
+  
   end
 
   def destroy
     Review.find(params[:id]).destroy
-    redirect_to "/festival/:id/"
+    # redirect_to "/festival/:id/"
   end
 
   private

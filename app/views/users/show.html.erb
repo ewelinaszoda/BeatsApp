@@ -1,4 +1,4 @@
-<h1>Hi there, <%= current_user.name %></h1>. 
+<br><h2>Hi there, <%= @user.username %></h2><br>
 
 <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
@@ -8,12 +8,22 @@
     <div class="alert"><%= flash[:alert] %></div>
 <% end %>
 
-<% if false %>
-<h3>Festival you are goit to: <% @user.festivals %>
-<%= render(@festivals) || "There are no festivals you are going to!" %>
-<% end %>
+<h3>Festivals you are going to: </h3>
+<ul>
+    <% @user.festivals.each  do |festival| %>
+        <li>
+            <%= link_to festival.name, festival %>
+        </li>
+    <% end %>
+</ul><br>
 
-<% if false %>
-<h3>Your reviews: <% @user.reviews %>
-<%= render(@festivals) || "There are no festivals you are going to!" %>
-<% end %>
+
+<h4>Your reviews:<h4>
+<ul>
+    <% @user.reviews.each do |review| %>
+        <li>
+            <%= link_to review.festival.name, review.festival %>:
+            <%= review.text %>
+        </li>
+    <% end %>
+</ul>

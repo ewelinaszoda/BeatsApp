@@ -12,13 +12,13 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.find_by(username: params[:user][:username])
+    @user = User.find_by(username: params[:username])
     if @user
       # found the user
-      if @user.authenticate(params[:user][:password])
+      if @user.authenticate(params[:password])
         # user managed to sign in
         session[:user_id] = @user.id
-        redirect_to '/festivals'
+        redirect_to @user
       else
         # user failed to sign in
         flash[:errors] = ["Password invalid."]
@@ -29,13 +29,28 @@ class UsersController < ApplicationController
       @user = User.create(user_params)
       if @user.valid?
         session[:user_id] = @user.id
-        redirect_to '/'
+        redirect_to @user
       else
         flash[:errors] = @user.errors.full_messages
         redirect_to '/sign-in'
       end
     end
   end
+
+
+    def show
+      @user = User.find_by(id: params[:id])
+  
+    end 
+
+
+  private 
+
+  def user_params
+    params.require(:user).permit(:username, :password)
+  end
+
+end
 
   # def sign_in
   # end 
@@ -58,8 +73,12 @@ class UsersController < ApplicationController
   # def show
   # end
 
+  # def kick_back
+    #     if session[:user_id] == nil
+    #       redirect_to '/sign-in'
+    #     end
+    #   end 
 
-  
   #    # to log out from the session
   #    def destroy
   #     session.delete :user_id
@@ -68,11 +87,3 @@ class UsersController < ApplicationController
   #   end
   
   # end
-
-  private 
-
-  def user_params
-    params.require(:user).permit(:username, :password)
-  end
-
-end
