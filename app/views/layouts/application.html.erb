@@ -21,43 +21,27 @@
   </head>
   <body>
   <header>
-  <div class="header">
-    <div class="header_logo">
-      <%= link_to image_tag('logo.jpg'), root_path, id: "logo" %>
-     </div>
-  <ul class="header_list">
-    <li><%= link_to "Home", "/" %></li>
-    <li><%= link_to "About", "/about" %></li>
-     <li><%= link_to  "ALL Fest", "/festivals" %></li>
-     <li><%= link_to  "Find Fest", "/festivals/find" %></li>
-    <li><%= link_to "Contact us", "/contact_us" %></li>
-     
-  </ul>
-  <div class="header_search">
-  
-
-     <%= link_to image_tag('search.png'), "/festivals/find" %>
-  </div>
-     <button class="header_sign_in">
-        <%= link_to "Sign in", "/sign-in", :class => "button" %>
-    </button>
-    <button class="header_log_in">
-        <%= link_to "Log in", "/sign-in", :class => "button" %>
-    </button>
-    <button class="header_log_out">
-        <%= link_to "Log out", "/sign_out", :class => "button" %>
-    </button>
-    
-  </div>
+    <div class="header">
+      <div class="header_logo">
+        <%= link_to image_tag('logo.jpg'), root_path, id: "logo" %>
+      </div>
+      <ul class="header_list">
+        <li><%= link_to "Home", "/" %></li>
+        <li><%= link_to "About", "/about" %></li>
+        <li><%= link_to  "ALL Fest", "/festivals" %></li>
+        <li><%= link_to  "Find Fest", "/festivals/find" %></li>
+        <li><%= link_to "Contact us", "/contact_us" %></li>
+      </ul>
+      <div class="header_search">
+        <%= link_to image_tag('search.png'), "/festivals/find" %>
+      </div>
+    </div>
   </header>
-
     <%= yield %>
- 
   </body>
- <footer class="footer" style="position: fixed; bottom:0; background:white; width:100%; padding-right:40px">
+ <footer class="footer" style="position: fixed; bottom:0; background:white; width:100%; padding-right:40px;">
   <h6>© 2020 Beats. All rights reserved.<h6>
   <div class="footer_social">
-
           <svg
             class="footer_social_icon"
             xmlns="http://www.w3.org/2000/svg"

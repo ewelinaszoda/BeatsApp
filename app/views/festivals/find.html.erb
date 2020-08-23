@@ -1,22 +1,10 @@
  <div class="cointainer">
- <%= image_tag('background.jpg', {:style => 'height:35vw;width:100%;margin-bottom:20px;'})%> 
-
-<%= form_with(model: @festival, url: '/find-festival', :class => "centered") do |f| %><br><br><br><br>
-<h2>Find the festival<h2><br>
-  <%= f.label 'Festival Name' %>
-  <%= f.collection_select :id, Festival.all, :id, :name %>
-
-  <%
-=begin%>
- <%= f.label 'Localization' %>
-  <%= f.collection_select :festival_id, Festival.all, :id, :localization %>
-
-  <%= f.label 'Genre' %>
-  <%= f.collection_select :festival_id, Festival.all, :id, :genre%> 
-<%
-=end%>
-
-  <%= f.submit 'Find' %>
+ <%= image_tag('background.jpg', {:style => 'height:35vw;width:100%;margin-bottom:20px;'})%>  
+  <%= form_with(model: @festival, url: '/find-festival', :class => "centered") do |f| %><br><br><br><br>
+  <h2>Find the festival<h2><br>
+    <%= f.label 'Festival Name' %>
+    <%= f.collection_select :id, Festival.all, :id, :name %>
+    <%= f.submit 'Find' %>
 <% end %><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 

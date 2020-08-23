@@ -25,7 +25,7 @@ class Festival < ApplicationRecord
 
     # def like
     #   self.update({ like: self.like + 1 })
-    #   # self.like
+    #   self.like
     # end
   
 end

@@ -5,29 +5,11 @@
     <h3> <%= @festival.description %><h3>
             <h4>Genre: <%= @festival.genre %></h4>
             <h4>👍 <%= @festival.like %></h4><br>
-
-            <%
-=begin%>
-            <%= link_to "👍", like_festival_path(@festival.id) %>
-
-            <%
-=end%>
-
             <h3> LINE UP:
                 <% @festival.bands.each do |band| %>
                 <h3>
                     <h4><%= link_to band.name, band %><h4>
                             <% end %><br>
-
-                            <ul>
-                                <h2>Check out who is going to the festival:</h2>
-                                <% @festival.users.each do |user| %>
-                                <h4>
-                                    <li><%= user.first_name %> <%= user.last_name %></li>
-                                </h4>
-                                <% end %>
-                            </ul>
-                            <ul>
 
                                 <ul>
                                     <h3>Reviews<h3>
