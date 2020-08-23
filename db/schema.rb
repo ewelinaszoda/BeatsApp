@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_29_051851) do
+ActiveRecord::Schema.define(version: 2020_08_23_153600) do
 
   create_table "bands", force: :cascade do |t|
     t.string "name"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2020_05_29_051851) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer "user_id", default: 759
     t.integer "festival_id"
     t.string "text"
     t.datetime "created_at", precision: 6, null: false

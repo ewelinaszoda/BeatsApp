@@ -10,13 +10,10 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.create(review_params)
-    # byebug
     if @review.valid?
-      redirect_to @review
-    else 
       redirect_to "/festivals"
-      # redirect_to new_review_path
-      # render :new
+    else 
+      redirect_to new_review_path
     end
   end
 
@@ -35,7 +32,6 @@ class ReviewsController < ApplicationController
 
   def destroy
     Review.find(params[:id]).destroy
-    # redirect_to "/festival/:id/"
   end
 
   private

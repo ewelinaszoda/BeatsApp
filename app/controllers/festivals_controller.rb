@@ -13,6 +13,7 @@ class FestivalsController < ApplicationController
   end 
 
   def contact_us
+    
   end 
 
   def show
