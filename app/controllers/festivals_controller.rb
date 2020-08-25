@@ -29,12 +29,6 @@ class FestivalsController < ApplicationController
     redirect_to @festival
   end
 
-  # def like 
-  #   @festival = Festival.find(params[:id])
-  #   @festival.like
-  #   redirect_to @festival
-  # end 
-
   def festival_params
     params.require(:festival).permit(:name, :start_date, :end_date, :localization, :genre, :like, :description)
   end 

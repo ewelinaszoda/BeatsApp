@@ -21,19 +21,6 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
   end
 
-  def edit
-    @reviews = Review.find(params[:id])
-  end
-
-  def update
-    @reviews = Review.find(params[:id])
-    @reviews.update(reviews_params)
-  end
-
-  def destroy
-    Review.find(params[:id]).destroy
-  end
-
   private
 
   def review_params

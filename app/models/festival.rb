@@ -22,10 +22,5 @@ class Festival < ApplicationRecord
     def festivals_with_max_like
       self.max_by(2) { |festival| festival.like }
     end 
-
-    # def like
-    #   self.update({ like: self.like + 1 })
-    #   self.like
-    # end
   
 end
