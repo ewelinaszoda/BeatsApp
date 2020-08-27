@@ -1,4 +1,22 @@
-# README
+# Beats
+
+A landing page with access to information about festivals and artists.
+
+### Table of Contents 
+
+Screenshots
+Demo
+Technologies
+Usage and Features
+Installation
+License
+
+## Screenshots
+
+
+## Demo 
+
+A full video demo is available [here]()
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
