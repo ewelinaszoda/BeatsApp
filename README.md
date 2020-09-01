@@ -15,6 +15,10 @@ License
 
 
 The user can: 
+find fesrival 
+chceck artists on festival 
+check on what more festival the artist could been seen 
+leave review for the festival 
 
 
 
